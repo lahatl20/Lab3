@@ -1,0 +1,6 @@
+use Payables
+go
+SELECT StateName, Name, ZipCode, FirstZipCode, LastZipCode
+FROM Vendors JOIN States
+	ON ZipCode BETWEEN FirstZipCode AND LastZipCode
+ORDER BY StateName, Name ASC
